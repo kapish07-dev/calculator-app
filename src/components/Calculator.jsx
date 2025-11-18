@@ -6,38 +6,23 @@ export default function Calculator({ input, handleButtonClick }) {
     { label: "=", className: "upBtn equalBtn" },
     { label: "Clear", className: "upBtn clearBtn" },
     { label: "History", className: "upBtn historyBtn" },
-    "7",
-    "8",
-    "9",
-    "/",
-    "4",
-    "5",
-    "6",
-    "+",
-    "1",
-    "2",
-    "3",
-    "-",
-    "00",
-    "0",
-    ".",
-    "*",
-    "%",
-    "(",
-    ")",
-    "DEL",
-  ].map((b) =>
-    typeof b === "string"
-      ? {
-          label: b,
-          className: ["DEL"].includes(b)
-            ? "clearSmall"
-            : ["+", "-", "*", "/", "%"].includes(b)
-            ? "btnOp"
-            : "btn",
-        }
-      : b
-  );
+        "7", "8", "9", "/", 
+        "4", "5","6", "+", 
+        "1", "2", "3", "-",
+        "00", "0", ".", "*", 
+        "%", "(", ")", "DEL",
+    ].map((b) =>
+      typeof b === "string"
+        ? {
+            label: b,
+            className: ["DEL"].includes(b)
+              ? "clearSmall"
+              : ["+", "-", "*", "/", "%"].includes(b)
+              ? "btnOp"
+              : "btn",
+          }
+        : b
+    );
 
   return (
     <>
