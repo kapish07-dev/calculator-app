@@ -11,7 +11,7 @@ export default function App() {
   const [history, setHistory] = useLocalStorage("calc_history_v1", []);
   const [theme, setTheme] = useLocalStorage("calc_theme", "light");
   const [showHistory, setShowHistory] = useState(false);
-
+  
   const clickSoundRef = useRef(null);
   const equalSoundRef = useRef(null);
 
@@ -161,6 +161,7 @@ export default function App() {
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [calculateResult, playSound]);
+
 
   return (
     <div className="container">
