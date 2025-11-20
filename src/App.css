@@ -11,8 +11,9 @@
 }
 
 body[data-theme="dark"] {
-  --bg: #0f1115;
-  --card: #121217;
+  --bg: #272b32;
+  /* --card: #ffffff; */
+  --card: #0c0c0c;
   --input-bg: #0d0d0d;
   --shadow-dark: rgba(0, 0, 0, 0.6);
   --text: #e8eef8;
@@ -47,8 +48,10 @@ body {
   flex-direction: column;
   align-items: center;
   position: relative;
-  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.06),
-    -10px -10px 25px rgba(255, 255, 255, 0.6);
+  margin-top: 2vh;
+  /* box-shadow: -4px -4px 220px rgba(100, 100, 100, 0.502),
+   4px 4px 220px rgba(49, 49, 49, 0.251); */
+    /* -8px -10px 21px rgba(255, 255, 255, 0.6); */
 }
 
 .topbar {
@@ -67,8 +70,9 @@ body {
   width: 38px;
   height: 38px;
   position: absolute;
-  right: -45px;
-  top: 10px;
+  left: 45%;
+  /* right: 50%; */
+  top: -45px;
   border-radius: 999px;
   border: none;
   cursor: pointer;
@@ -79,7 +83,7 @@ body {
   );
   font-size: 1rem;
   box-shadow: inset 6px 6px 14px rgba(0, 0, 0, 0.06),
-    inset -6px -6px 14px #ffffff44;
+    inset -6px -6px 14px #ffffff0e;
 }
 
 .resultInput {
@@ -93,8 +97,8 @@ body {
   padding: 1rem 1.1rem;
   color: var(--text);
   background-color: var(--input-bg);
-  box-shadow: inset 7px 7px 5px rgba(0, 0, 0, 0.04),
-    inset -7px -7px 62px #ffffff44;
+  box-shadow: inset 4px 4px 350px rgba(39, 39, 39, 0.317),
+    inset -7px -7px 350px #9a9a9a3e;
 }
 
 .keypad {
@@ -135,8 +139,8 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  box-shadow: inset 11px 11px 25px rgba(0, 0, 0, 0.04),
-    inset -11px -11px 22px rgba(255, 255, 255, 0.6);
+  box-shadow: inset 4px 14px 35px rgba(0, 0, 0, 0.144),
+    inset 4px 4px 35px rgba(165, 160, 160, 0.247);
   transition: transform 120ms cubic-bezier(0.2, 0.9, 0.2, 1),
     box-shadow 180ms ease, background 120ms ease;
   user-select: none;
@@ -151,15 +155,15 @@ body {
   height: 40px;
   font-weight: 600;
   text-align: center;
-  box-shadow: inset 11px 11px 25px rgba(0, 0, 0, 0.04),
-    inset -11px -11px 22px rgba(255, 255, 255, 0.6);
+  box-shadow: inset -4px -4px -25px rgba(0, 0, 0, 0.04),
+    inset 4px 4px -22px rgba(255, 255, 255, 0.6);
 }
 
 .equalBtn {
   background: linear-gradient(
     180deg,
-    rgba(120, 180, 255, 0.12),
-    rgba(80, 140, 255, 0.06)
+    rgba(107, 107, 107, 0.226),
+    rgba(107, 107, 107, 0.139)
   );
   width: 5.8rem;
   font-weight: 700;
@@ -178,7 +182,7 @@ body {
 .clickable:active {
   transform: scale(0.97);
   box-shadow: inset 6px 6px 12px rgba(0, 0, 0, 0.06),
-    inset -6px -6px 12px rgba(255, 255, 255, 0.6);
+    inset -6px -6px 12px rgba(36, 36, 36, 0.116);
 }
 
 .clickable:focus {
@@ -201,16 +205,17 @@ body {
     rgba(255, 255, 255, 0.06),
     rgba(0, 0, 0, 0.02)
   );
-  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.06),
-    -8px -8px 20px rgba(255, 255, 255, 0.6);
+  /* box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.06),
+    -8px -8px 20px rgba(38, 37, 37, 0.6); */
 }
 
 .history-panel {
+  color: #ab9400;
   position: absolute;
-  top: 20%;
+  top: 18%;
 
   right: calc(100%+12px);
-  width: 300px;
+  width: 290px;
   max-height: 580px;
   background: var(--card);
   border-radius: 12px;
@@ -252,14 +257,18 @@ body {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  max-height: 300px;
+  max-height: 310px;
+}
+
+.history-list::-webkit-scrollbar{
+  width: 0;
 }
 
 .history-item {
   background: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0.02),
-    rgba(0, 0, 0, 0.02)
+    rgba(161, 161, 161, 0.119),
+    rgba(124, 124, 124, 0.057)
   );
   padding: 8px;
   border-radius: 8px;

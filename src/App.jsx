@@ -11,7 +11,7 @@ export default function App() {
   const [history, setHistory] = useLocalStorage("calc_history_v1", []);
   const [theme, setTheme] = useLocalStorage("calc_theme", "light");
   const [showHistory, setShowHistory] = useState(false);
-  
+
   const clickSoundRef = useRef(null);
   const equalSoundRef = useRef(null);
 
@@ -162,7 +162,6 @@ export default function App() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [calculateResult, playSound]);
 
-
   return (
     <div className="container">
       <div className="topbar">
@@ -172,12 +171,12 @@ export default function App() {
 
       <Calculator input={input} handleButtonClick={handleButtonClick} />
 
-      <button
+      {/* <button
         className="floating-history clickable"
         onClick={() => setShowHistory((s) => !s)}
       >
         🕑
-      </button>
+      </button> */}
 
       <HistoryDrawer
         show={showHistory}
